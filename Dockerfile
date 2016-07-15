@@ -1,0 +1,3 @@
+FROM rabbitmq:3-management
+
+EXPOSE 4369 5671 5672 15671 15672 25672

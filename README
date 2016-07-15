@@ -1,0 +1,6 @@
+In order to build a new image for dev:
+npm run rabbitmq:docker:build:dev
+npm run rabbitmq:docker:push:dev
+
+In order to run locally:
+npm run rabbitmq:docker:run:dev
