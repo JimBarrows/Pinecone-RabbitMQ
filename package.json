@@ -4,7 +4,7 @@
   "description" : "The rabbitmq database for pinceone",
   "private" : true,
   "scripts" : {
-	"rabbitmq:docker:run:dev" : "docker run --detach --name pinecone-rabbitmq -p 27017:27017 registry.gitlab.com/reallybigtree/pinecone-rabbitmq",
+	"rabbitmq:docker:run:dev" : "docker run --detach --name pinecone-rabbitmq -p 4369:4369 -p 5671:5671 -p 5672:5672 -p 15671:15671 -p 15672:15672 -p 25672:25672 registry.gitlab.com/reallybigtree/pinecone-rabbitmq",
 	"rabbitmq:docker:push:dev" : "docker push registry.gitlab.com/reallybigtree/pinecone-rabbitmq",
 	"rabbitmq:docker:build:dev" : "docker build -t registry.gitlab.com/reallybigtree/pinecone-rabbitmq ."
   }
