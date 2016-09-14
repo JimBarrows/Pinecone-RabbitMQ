@@ -1,10 +1,10 @@
 {
   "name" : "pinecone-rabbitmq",
   "version" : "1.0.0",
-  "description" : "The rabbitmq database for pinceone",
+  "description" : "The rabbitmq database for pinceone.",
   "private" : true,
   "scripts" : {
-	"rabbitmq:docker:run:dev" : "docker run --detach --name pinecone-rabbitmq -p 4369:4369 -p 5671:5671 -p 5672:5672 -p 15671:15671 -p 15672:15672 -p 25672:25672 registry.gitlab.com/reallybigtree/pinecone-rabbitmq",
+	"rabbitmq:docker:run:dev" : "docker run --detach --label=traefik.backend=pinecone-rabbitmq --label=traefik.port=5671 --hostname pinecone-rabbitmq -e RABBITMQ_ERLANG_COOKIE='f90fc6086120ca8caaae3011206d52f4' --name pinecone-rabbitmq -p 4369:4369 -p 5671:5671 -p 5672:5672 -p 15671:15671 -p 15672:15672 -p 25672:25672 registry.gitlab.com/reallybigtree/pinecone-rabbitmq",
 	"rabbitmq:docker:push:dev" : "docker push registry.gitlab.com/reallybigtree/pinecone-rabbitmq",
 	"rabbitmq:docker:build:dev" : "docker build -t registry.gitlab.com/reallybigtree/pinecone-rabbitmq ."
   }

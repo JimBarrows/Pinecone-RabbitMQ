@@ -4,3 +4,11 @@ npm run rabbitmq:docker:push:dev
 
 In order to run locally:
 npm run rabbitmq:docker:run:dev
+
+
+In order to cluster see:
+http://www.rabbitmq.com/clustering.html
+http://www.levvel.io/blog-post/testing-rabbitmq-clustering-using-docker-part-1/
+The local run:dev is mostly setup for it.  Just need to swarm it.
+
+"Super Secret Pincecone Rabbit MQ Cookie for Great Equality And Stealing all your Base"
