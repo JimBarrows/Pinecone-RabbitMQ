@@ -7,4 +7,4 @@ build_image:
     - docker build -t registry.gitlab.com/reallybigtree/pinecone-rabbitmq .
     - docker push registry.gitlab.com/reallybigtree/pinecone-rabbitmq
   only:
-    - develop
+    - master
