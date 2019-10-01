@@ -1,14 +1,14 @@
 {
-  "name" : "pinecone-rabbitmq",
-  "version" : "1.0.0",
-  "description" : "The rabbitmq database for pinceone.",
+  "name": "pinecone-rabbitmq",
+  "version": "1.0.0",
+  "description": "The rabbitmq message queue for pinecone.",
   "bugs": {
     "url": "https://github.com/JimBarrows/Pinecone-RabbitMQ/issues"
   },
   "scripts": {
-    "docker:push": "docker push registry.gitlab.com/reallybigtree/pinecone-RabbitMQ",
-    "docker:build": "docker build -t registry.gitlab.com/reallybigtree/pinecone-RabbitMQ .",
-    "docker:run": "docker run --detach --name pinecone-RabbitMQ --label=traefik.backend=RabbitMQ --label=traefik.port=8080 --link pinecone-server:server registry.gitlab.com/reallybigtree/pinecone-RabbitMQ"
+    "docker:push": "docker push pinecone/RabbitMQ",
+    "docker:build": "docker build -t pinecone/message_queue .",
+    "docker:run": "docker run --detach --name pinecone-mq --label=traefik.backend=mq --label=traefik.port=8080 --link pinecone-server:server pinecone/message_queue"
   },
   "author": {
     "name": "Jim Barrows",
@@ -20,5 +20,5 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:JimBarrows/Pinecone-RabbitMQ.git"
-  },
+  }
 }
